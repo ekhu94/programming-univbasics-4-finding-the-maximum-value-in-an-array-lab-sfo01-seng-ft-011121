@@ -1,5 +1,3 @@
 def find_max_value(arr)
-  max = 0
-  arr.each { |num| max = num if num > max }
-  return max
+  arr.reduce { |max, val| max > val ? max : val }
 end
